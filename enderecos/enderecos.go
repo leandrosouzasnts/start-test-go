@@ -6,7 +6,7 @@ import (
 
 // TipoEndereco recebe um endereço e retorna seu tipo (Rua, Avenida ...)
 func TipoEndereco(endereco string) string {
-	tiposEnderecoValidos := []string{"rua", "avenida", "rodovia"}
+	tiposEnderecoValidos := []string{"rua", "avenida", "rodovia", "estrada"}
 
 	prefixoEndereco := strings.ToLower(endereco)
 	tipoEndereco := strings.Split(prefixoEndereco, " ")[0]
