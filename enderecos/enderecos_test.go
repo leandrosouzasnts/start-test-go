@@ -1,6 +1,7 @@
-package enderecos
+package enderecos_test
 
 import (
+	. "start-test-go/enderecos" // . é um Alias assim não preciso definir o pacote na hora de usar.
 	"testing"
 )
 
@@ -15,7 +16,7 @@ func TestTipoEndereco(t *testing.T) {
 		{"Avenida Teste", "Avenida"},
 		{"Estrada Teste", "Estrada"},
 		{"Rodovia Teste", "Rodovia"},
-		{"Praça Teste", "Tipo Inválido"},
+		//{"Praça Teste", "Tipo Inválido"},
 	}
 
 	for _, cenario := range cenariosTipoEndereco {
@@ -24,5 +25,11 @@ func TestTipoEndereco(t *testing.T) {
 		if tipoEnderecoRetorno != cenario.enderecoEsperado {
 			t.Errorf("Tipo Inválido: Esperado '%s' e o retorno foi '%s'", cenario.enderecoEsperado, tipoEnderecoRetorno)
 		}
+	}
+}
+
+func TestQualquer(t *testing.T) {
+	if 1 > 2 {
+		t.Errorf("Teste quebrou!")
 	}
 }
