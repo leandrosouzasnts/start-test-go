@@ -1,6 +1,9 @@
 package formas
 
-import "testing"
+import (
+	"math"
+	"testing"
+)
 
 func TestArea(t *testing.T) {
 
@@ -16,7 +19,7 @@ func TestArea(t *testing.T) {
 
 	t.Run("Circulo", func(t *testing.T) {
 		circ := Circulo{10}
-		areaEsperada := float64(314.000000)
+		areaEsperada := float64(math.Pi * 100)
 		areaRecebida := CalcArea(circ)
 
 		if areaEsperada != areaRecebida {
